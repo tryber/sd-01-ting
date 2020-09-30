@@ -1,5 +1,7 @@
 from os.path import isfile
 
+# código feito com o auxílio do Doug Funny, mais conhecido como douglas da programação
+
 
 class Manager:
     # def __init__(self):
@@ -27,4 +29,4 @@ class Manager:
             return text
 
         switcher = {"writer": writer, "reader": reader}
-        return switcher.get(modifier, lambda: "método não implementado")() 
+        return switcher.get(modifier, lambda: "método não implementado")()

@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+# código feito com o auxílio do Doug Funny, mais conhecido como douglas da programação
+
 
 class AbstractFactory(ABC):
     @abstractmethod

@@ -1,5 +1,7 @@
 from service.manager import Manager
 
+# código feito com o auxílio do Doug Funny, mais conhecido como douglas da programação
+
 
 class FileManagement:
     def __init__(self):

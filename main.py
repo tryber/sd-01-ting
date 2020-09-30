@@ -1,6 +1,8 @@
 from ting_file_management.file_process import FileProcess
 from time import sleep
 
+# código feito com o auxílio do Doug Funny, mais conhecido como douglas da programação
+
 
 def f_main():
     path = "statics/arquivo_teste.txt"

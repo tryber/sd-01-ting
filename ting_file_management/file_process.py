@@ -1,6 +1,8 @@
 from ting_file_management.file_management import FileManagement
 from ting_file_management.factory import Factory
 
+# código feito com o auxílio do Doug Funny, mais conhecido como douglas da programação
+
 
 class FileProcess:
     def __init__(self):
