@@ -2,7 +2,6 @@ from os.path import isfile
 
 
 class Manager:
-    # def __init__(self):
     def valid_file_checker_and_extension(self, path_file):
         if not path_file.endswith(".txt"):
             print("Formato inválido")
