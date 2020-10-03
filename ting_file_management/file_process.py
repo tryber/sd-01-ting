@@ -1,30 +1,51 @@
 from file_management import txt_importer
 
 
-def process(path_file):
-    get_read_file = txt_importer(path_file)
-    if not isinstance(get_read_file, list):
-        return get_read_file
+class FileProcess:
+    def __init__(self):
+        self.list_file = []
 
-    file_name = path_file.split("/")
+    def process(self, path_file):
+        get_read_file = txt_importer(path_file)
+        if not isinstance(get_read_file, list):
+            return get_read_file
 
-    process_file = {
-        "nome_do_arquivo": file_name[len(file_name) - 1],
-        "qtd_linhas": len(get_read_file[0]),
-        "posicao": len(get_read_file)
-    }
+        file_name = path_file.split("/")
 
-    print(process_file)
+        process_file = {
+            "nome_do_arquivo": file_name[len(file_name) - 1],
+            "qtd_linhas": len(get_read_file[0]),
+            "posicao": len(get_read_file)
+        }
 
-    return process_file
+        self.list_file.append(process_file)
+
+        print(process_file)
+        return process_file
+
+    def remove(self, path_file):
+        get_read_file = txt_importer(path_file)
+        if not get_read_file:
+            return "Arquivo não existe"
+
+        print(get_read_file)
+        try:
+            del get_read_file[len(get_read_file) - 1]
+            print(get_read_file)
+            return f"Arquivo {path_file} removido com sucesso"
+        except IndexError:
+            return f"Arquivo {path_file} não removido"
+
+    def file_metadata(self, position, path_file):
+        self.process(path_file)
+        for item in self.list_file:
+            if item["posicao"] == position:
+                print(item, "oi")
+                return item
+
+        return "Posição inválida"
 
 
-def remove():
-    raise NotImplementedError
-
-
-def file_metadata(position):
-    raise NotImplementedError
-
-
-process('statics/arquivo_teste.txt')
+process = FileProcess()
+# process('statics/arquivo_teste.txt')
+print(process.file_metadata(2, 'statics/arquivo_teste.txt'))
