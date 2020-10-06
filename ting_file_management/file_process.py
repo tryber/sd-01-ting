@@ -20,8 +20,7 @@ class FileProcess:
 
         self.list_file.append(process_file)
 
-        print(process_file)
-        return process_file
+        return self.list_file
 
     def remove(self, path_file):
         get_read_file = txt_importer(path_file)
@@ -46,6 +45,6 @@ class FileProcess:
         return "Posição inválida"
 
 
-process = FileProcess()
+# file_process = FileProcess()
 # process('statics/arquivo_teste.txt')
-print(process.file_metadata(2, 'statics/arquivo_teste.txt'))
+# print(file_process.file_metadata(2, 'statics/arquivo_teste.txt'))
