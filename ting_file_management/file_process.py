@@ -1,4 +1,4 @@
-def process(self, path_file):
+def process(path_file):
     raise NotImplementedError
 
 
