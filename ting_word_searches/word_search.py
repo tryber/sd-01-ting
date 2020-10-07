@@ -1,7 +1,8 @@
+# Codigo feito com a ajuda do Henrique Eyer e do Doug Funny!
+
 from ting_file_management.file_process import FileProcess
 from ting_word_searches.factory import Factory
 from ting_file_management.file_management import FileManagement
-# Codigo feito junto com o DOuglas da Programação feito com sua orientação.
 
 
 class SearchByWord:
@@ -13,5 +14,5 @@ class SearchByWord:
         file_process = FileProcess()
         file_process.process(self.path)
         lines = {"linha": line for line in main.fifo}
-        answer = [Factory.dictionary(word, self.path, lines)]
-        return answer
+        result = [Factory.dictionary(word, self.path, lines)]
+        return result

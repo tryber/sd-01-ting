@@ -1,5 +1,6 @@
+# Codigo feito com a ajuda do Henrique Eyer e do Doug Funny!
+
 from service.manager import Manager
-# Codigo feito junto com o DOuglas da Programação feito com sua orientação.
 
 
 class FileManagement:
@@ -12,4 +13,4 @@ class FileManagement:
             return None
         value = main.file_reader_and_writer("reader", path_file)
         self.fifo.append(value)
-        print("importado com sucesso!")
+        print("Importado com sucesso!")

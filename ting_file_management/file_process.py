@@ -1,6 +1,7 @@
+# Codigo feito com a ajuda do Henrique Eyer e do Doug Funny!
+
 from ting_file_management.file_management import FileManagement
 from ting_file_management.factory import Factory
-# Codigo feito junto com o DOuglas da Programação feito com sua orientação.
 
 
 class FileProcess:
@@ -13,9 +14,9 @@ class FileProcess:
         try:
             self.main.txt_importer(path_file)
             amount_lines = len(self.main.fifo[0].split("\n"))
-            answer = Factory.dictionary(path_file, amount_lines, len(self.main.fifo))
-            print(answer)
-            return answer
+            result = Factory.dictionary(path_file, amount_lines, len(self.main.fifo))
+            print(result)
+            return result
 
         except ValueError:
             raise
@@ -31,7 +32,7 @@ class FileProcess:
     def file_metadata(self, position):
         try:
             amount_lines = len(self.main.fifo[position - 1].split("\n"))
-            answer = Factory.dictionary(self.path, amount_lines, position)
-            return answer
+            result = Factory.dictionary(self.path, amount_lines, position)
+            return result
         except ValueError:
             raise

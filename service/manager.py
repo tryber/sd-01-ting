@@ -1,5 +1,6 @@
+# Codigo feito com a ajuda do Henrique Eyer e do Doug Funny!
+
 from os.path import isfile
-# Codigo feito junto com o DOuglas da Programação feito com sua orientação.
 
 
 class Manager:

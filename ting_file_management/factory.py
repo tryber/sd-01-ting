@@ -1,5 +1,6 @@
+# Codigo feito com a ajuda do Henrique Eyer e do Doug Funny!
+
 from abc import ABC, abstractmethod
-# Codigo feito junto com o DOuglas da Programação feito com sua orientação.
 
 
 class AbstractFactory(ABC):
